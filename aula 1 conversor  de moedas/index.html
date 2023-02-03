@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script.js"></script>
-    <title>Aula 1</title>
+    <title>Conversor de Moeda</title>
 </head>
 <body>
+    <h1 id="titleText" >Conversor de Moedas</h1>
     <div class="container">
-        <h1 class="page-title">
-            Conversor de moedas
-        </h1>
-        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+        <div class="valueInput" >
+            <select class="coinSelect">
+                <option>BRL</option>
+                <option>US$</option>
+                <option>EUR</option>
+                <option>BTC</option>
+
+            </select>
+            <select class="coinSelect">
+                <option>BRL</option>
+                <option>US$</option>
+                <option>EUR</option>
+                <option>BTC</option>
+            </select>
+
+        </div>
+        <div class="">
+            <input class="valuePrint" id="inputNumber" type="number" placeholder="Valor a ser convertido" />
+            <p class="valuePrint" >Valor convertido</p>
+            <button  onclick="buttonConvert()" >Converter</button>
+        </div>
     </div>
-    <a href="https://alura.com.br/" target="_blank">
-        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-        <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
-    </a>
+    <footer class="footer" >
+        <p>desenvolvido por Douglas Arthur</p>
+    </footer>
 </body>
 </html>
