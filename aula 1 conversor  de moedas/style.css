@@ -76,4 +76,8 @@ button{
     margin-top: 10px;
 
 }
+#prints{
+    display: flex;
+    flex-direction: column;
+}
   

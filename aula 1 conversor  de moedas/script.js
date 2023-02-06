@@ -6,16 +6,18 @@
 let valueConvert = null;
 let finalValue = null;
 
-let input = document.getElementById("inputNumber")
-let prints = document.getElementById("prints")
+const input = document.getElementById("inputNumber")
+const prints = document.getElementById("prints")
+const documentValue = document.getElementById("convert")
+
 
 
 function selectOption(){
 
-    let select = document.getElementById("coinToConvert")
+    const select = document.getElementById("coinToConvert")
     let optionValue = select.options[select.selectedIndex].value;
 
-    let selectTwo = document.getElementById("coinConvert")
+    const selectTwo = document.getElementById("coinConvert")
     let optionValueTwo = selectTwo.options[selectTwo.selectedIndex].value;
 
     if(optionValue === "brl"){
@@ -27,19 +29,23 @@ function selectOption(){
         if(optionValueTwo === "us"){
             valueConvert = input.value/dollarPrice
             finalValue = valueConvert.toFixed(2)
-            console.log(finalValue)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "eur"){
             valueConvert = input.value/euroPrice
             finalValue = valueConvert.toFixed(2)
-            console.log(finalValue)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "btc"){
             valueConvert = input.value/bitCoinPrice
-            finalValue = valueConvert
-            console.log(finalValue)
+            finalValue = valueConvert.toFixed(7)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
         }else{
-            console.log("Não é possivel converter as mesmas moedas")
+            // console.log("Não é possivel converter as mesmas moedas")
+            documentValue.textContent = "Não é possivel converter"
         };
 
     }else if(optionValue === "us"){
@@ -50,20 +56,24 @@ function selectOption(){
         if(optionValueTwo === "brl"){
             valueConvert = input.value*realPrice
             finalValue = valueConvert.toFixed(2)
-            prints.innerHTML = prints.innerHTML + ("<p class='valuePrint'>"+finalValue+"</p>")
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
             
-
         }else if(optionValueTwo === "eur"){
             valueConvert = input.value*euroPrice
             finalValue = valueConvert.toFixed(2)
-            console.log(finalValue)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "btc"){
             valueConvert = input.value/bitCoinPrice
-            finalValue = valueConvert
-            console.log(finalValue)
+            finalValue = valueConvert.toFixed(7)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
+
         }else{
-            console.log("Não é possivel converter as mesmas moedas")
+            // console.log("Não é possivel converter as mesmas moedas")
+            documentValue.textContent = "Não é possivel converter"
         };
 
     }else if(optionValue === "eur"){
@@ -72,21 +82,25 @@ function selectOption(){
         const bitCoinPrice = 21520.48;
 
         if(optionValueTwo === "us"){
-            valueConvert = input.value/dollarPrice
+            valueConvert = input.value*dollarPrice
             finalValue = valueConvert.toFixed(2)
-            console.log(finalValue)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "brl"){
             valueConvert = input.value*realPrice
             finalValue = valueConvert.toFixed(2)
-            console.log(finalValue)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "btc"){
             valueConvert = input.value/bitCoinPrice
-            finalValue = valueConvert
-            console.log(finalValue)
+            finalValue = valueConvert.toFixed(7)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
         }else{
-            console.log("Não é possivel converter as mesmas moedas")
+            // console.log("Não é possivel converter as mesmas moedas")
+            documentValue.textContent = "Não é possivel converter"
         };
     }else if(optionValue === "btc"){
         const dollarPrice = 23298.00;
@@ -95,20 +109,24 @@ function selectOption(){
 
         if(optionValueTwo === "us"){
             valueConvert = input.value*dollarPrice
-            finalValue = valueConvert
-            console.log(finalValue)
+            finalValue = valueConvert.toFixed(2)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "brl"){
             valueConvert = input.value*realPrice
-            finalValue = valueConvert
-            console.log(finalValue)
+            finalValue = valueConvert.toFixed(2)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
 
         }else if(optionValueTwo === "eur"){
             valueConvert = input.value*euroPrice
-            finalValue = valueConvert
-            console.log(finalValue)
+            finalValue = valueConvert.toFixed(2)
+            // console.log(finalValue)
+            documentValue.textContent = finalValue
         }else{
-            console.log("Não é possivel converter as mesmas moedas")
+            // console.log("Não é possivel converter as mesmas moedas")
+            documentValue.textContent = "Não é possivel converter"
         };
     };
 }
