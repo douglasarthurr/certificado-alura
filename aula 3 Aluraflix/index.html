@@ -5,21 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../images/logo.svg" type="image/x-icon">
     <script src="./script.js" ></script>
-    <title>Aluraflix</title>
+    <title>DCFLIX</title>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1 class="page-title">
-                Aluraflix
-            </h1>
-            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+<header class="header">
+    <div class="containerHeader">
+        <img class="logo" src="../images/logo.svg"/>
+        <p class="title">DGFLIX</p>
+        <div class="bar">
+            <a class="pages">HOME</a>
+            <a class="pages">FILMES</a>
+            <a class="pages">SERIES</a>
         </div>
-        <a href="https://alura.com.br/" target="_blank">
-            <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-        </a>
-    </header>
-    
+    </div>
+</header>
+<body>
+    <p class="page-subtitle">
+        Qual seu filme favorito?
+    </p>
+    <div class="form-wrapper">
+        <input type="text" id="imgMovie" name="movie" placeholder="Insira endereço de imagem">
+        <input type="text" id="text" name="text" placeholder="Insira endereço de o titulo do filme">
+        <input type="text" id="linkTrailer" name="linkTrailer" placeholder="Insira endereço de link do trailer">
+        <button onClick="adicionarFilme()">Adicionar Filme</button>
+      </div>
+    </div>
+    <div id="listaFilmes">
+        <div class="movies">
+            <a target="_blank" href="https://www.youtube.com/watch?v=sLk94T-hS78">
+                <img src="../images/gatoDeBotas.jpg" alt="gato de botas">
+                <a class="titleMovies" href="">Gato De Botas | O Último pedido</a>
+            </a>
+        </div>
+        <div class="movies">
+            <a target="_blank" href="https://www.youtube.com/watch?v=guPm5TvS8Qs">
+                <img src="../images/devotion.webp" alt="devotion">
+                <a class="titleMovies" href="">Irmãos de Honra</a>
+            </a>
+        </div>
+        <div class="movies">
+            <a target="_blank" href="https://www.youtube.com/watch?v=9Jgua93Xhcw">
+                <img src="../images/topgun.jpg" alt="Top Gun Maverick">
+                <a class="titleMovies" href="">Top Gun: Maverick</a>
+            </a>
+        </div>
+    </div>
+
+    <p id="rodape">Developed by Douglas Arthur</p>
 </body>
 </html>
