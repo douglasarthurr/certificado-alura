@@ -80,4 +80,18 @@ button{
     display: flex;
     flex-direction: column;
 }
+
+.pageHome{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    color: white;
+    font-size: 20px;
+    border-bottom: white solid 2px;
+    text-decoration: none;
+}
+
+.pageHome:hover{
+    color: #2a61a9;
+}
   

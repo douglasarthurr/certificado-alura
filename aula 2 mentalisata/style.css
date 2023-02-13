@@ -60,3 +60,17 @@ body {
   font-size: 24px;
   margin-bottom: 10px;
 }
+
+.pageHome{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  border-bottom: white solid 2px;
+}
+
+.pageHome:hover{
+  color: #2a61a9;
+}
