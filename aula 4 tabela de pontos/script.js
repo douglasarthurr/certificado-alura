@@ -1,7 +1,3 @@
-//adicionar outros jogadores adicionando em listas e for automatizando
-//passar para um jogo que a eu gosto personalizar a tabela
-//compartilhar os projetos nas redes sociais
-
 function adicionarVitoria(player){
     player.vitoria++;
     player.pontos += 3;
